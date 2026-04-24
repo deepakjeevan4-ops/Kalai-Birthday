@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalai | Birthday Celebration</title>
+    <!-- AOS CSS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cinematic Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-text">Initializing</div>
+            <div id="loader-progress">0%</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor (Desktop Only) -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- Particle Background Container -->
+    <div id="tsparticles"></div>
+    
+    
+    <!-- Floating Controls -->
+    <div class="floating-controls">
+        <button id="theme-toggle" class="magnetic" title="Toggle Dark/Light Mode">🌙</button>
+        <button id="music-toggle" class="magnetic" title="Play/Pause Music">🎵</button>
+        <audio id="bg-music" loop>
+            <source src="assets/music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    
+    <header class="hero">
+        <div class="glass-panel" data-aos="zoom-in" data-aos-duration="1500">
+            <h1 class="birthday-title type-writer">Happy Birthday, Kalai</h1>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="500">A Celebration of Our Journey</p>
+            <button id="scroll-btn" class="glow-on-hover magnetic" data-aos="fade-up" data-aos-delay="800">Explore Memories</button>
+        </div>
+    </header>
+
+    <section id="time-together" class="counter-section">
+        <div class="glass-panel" data-aos="fade-up" data-aos-duration="1000">
+            <h2>A Lifetime of Sisterhood</h2>
+            <div class="counter-box">
+                <div class="time-block">
+                    <span id="days">00</span>
+                    <p>Days</p>
+                </div>
+                <div class="time-block">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="time-block">
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="time-block">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+            <p class="start-date-text">Since May 21st, 2025</p>
+        </div>
+    </section>
+
+    <section id="memories" class="memories-section">
+        <h2 class="section-title" data-aos="fade-right">Our Journey</h2>
+        <p class="section-desc" data-aos="fade-left">Capturing the moments that defined our sisterhood.</p>
+        
+        <div class="gallery">
+            <div class="memory-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="img-container">
+                    <img src="assets/memory1.jpeg" alt="Memory 1" style="object-position: center 10%;">
+                </div>
+                <div class="memory-text">
+                    <h3>Where It All Began</h3>
+                    <p>The campus where we first met and shared so many stories.</p>
+                </div>
+            </div>
+            
+            <div class="memory-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="img-container">
+                    <img src="assets/memory2.jpeg" alt="Memory 2" style="object-position: center 50%;">
+                </div>
+                <div class="memory-text">
+                    <h3>Endless Laughs</h3>
+                    <p>Moments and jokes only we understand.</p>
+                </div>
+            </div>
+
+            <div class="memory-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="img-container">
+                    <img src="assets/memory3.jpeg" alt="Memory 3" style="object-position: center 20%;">
+                </div>
+                <div class="memory-text">
+                    <h3>Always Together</h3>
+                    <p>Through all the ups and downs, always having each other's back.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Video Player Section -->
+    <section class="video-section">
+        <div class="glass-panel video-panel" data-aos="zoom-in" data-aos-duration="1200">
+            <h2 class="section-title">A Living Memory</h2>
+            <p class="section-desc">Capturing the motion of our friendship.</p>
+            <div class="video-wrapper">
+                <video controls preload="metadata" class="premium-video">
+                    <source src="assets/birthday_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="message-section">
+        <div class="glass-panel message-panel" data-aos="zoom-in-up" data-aos-duration="1200">
+            <h2>The Celebration</h2>
+            <p class="heartfelt-text">
+                Kalai, you are a true blessing in my life. Even though we don't share the same blood, you have always been a sister to me. Thank you for all the support, the crazy college memories, and for just being you. 
+                <br><br>
+                May this year bring you all the success, joy, and happiness you deserve. Have an amazing birthday!
+            </p>
+            <p class="signature">- With love, Deepak</p>
+        </div>
+    </section>
+
+    <section class="gift-section">
+        <div class="glass-panel" data-aos="flip-up" data-aos-duration="1000">
+            <h2>The Reveal</h2>
+            <p>Unlock your final surprise.</p>
+            <div id="gift-box" class="gift-box">
+                <div class="lid"></div>
+                <div class="box"></div>
+            </div>
+            <div id="secret-message" class="hidden-message">
+                <h3>You're the best!</h3>
+                <p>No matter where life takes us, I'll always be cheering you on. Here's to a hundred more birthdays together! 🎉</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Curated with Heart for Kalai</p>
+    </footer>
+
+    <!-- Professional Animation Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2.12.0/tsparticles.engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-basic@2.12.0/tsparticles.basic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-interaction-particles-links@2.12.0/tsparticles.interaction.particles.links.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-move-base@2.12.0/tsparticles.move.base.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-shape-circle@2.12.0/tsparticles.shape.circle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-color@2.12.0/tsparticles.updater.color.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-opacity@2.12.0/tsparticles.updater.opacity.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-out-modes@2.12.0/tsparticles.updater.out-modes.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-size@2.12.0/tsparticles.updater.size.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
